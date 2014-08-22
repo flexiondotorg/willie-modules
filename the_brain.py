@@ -76,5 +76,38 @@ def chatter(bot, trigger):
                    'Talking about me behind my back again?']
         bot.say(random.choice(respond))
     else:
+        # Respond to goings on.
+        for laughter in ['lol', 'rofl', 'haha', 'hehe', 'hoho', 'lmao']:
+            if laughter in msg_without_nick.lower():
+               human = random.uniform(0, time_to_think)
+               time.sleep(human)
+               respond = ['LOL', 'ROLF', 'haha', 'LMAO', 'hehe', ':-D', 'hoho']
+               bot.say(random.choice(respond))
+               return
+
+        for greeting in ['hello', 'welcome', 'greetings', 'hi', 'yo', 'hey', 'morning', 'afternoon', 'evening']:
+            if msg_without_nick.lower().startswith(greeting):
+               human = random.uniform(0, time_to_think)
+               time.sleep(human)
+               respond = ['Yo', 'Hey', 'Greetings', 'Hi', 'Hello', 'Welcome', 'How do you do', 'Time appropriate greetings']
+               bot.say(random.choice(respond))
+               return
+
+        for valediction in ['bye', 'goodbye', 'ttfn', 'brb', 'goodnight']:
+            if msg_without_nick.lower().startswith(valediction) or msg_without_nick.lower().endswith(valediction):
+               human = random.uniform(0, time_to_think)
+               time.sleep(human)
+               respond = ['Bye', 'Bye bye', 'See you', 'Until next time', 'Good bye', 'Have a nice day', 'Come back soon', 'See ya', 'Later', 'Missing you already']
+               bot.say(random.choice(respond))
+               return
+
+        for ponder in ['damn it', 'heh', 'huh', 'wtf', 'hmm']:
+            if ponder in msg_without_nick.lower():
+               human = random.uniform(0, time_to_think)
+               time.sleep(human)
+               respond = ['Hmm', 'Tricky', 'Beats me', 'Google it', 'I feel your pain']
+               bot.say(random.choice(respond))
+               return
+
         # If we arrive here, do nothing.
 	return
