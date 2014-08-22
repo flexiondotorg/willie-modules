@@ -77,19 +77,24 @@ def chatter(bot, trigger):
         bot.say(random.choice(respond))
     else:
         # Respond to goings on.
-        for laughter in ['lol', 'rofl', 'haha', 'hehe', 'hoho', 'lmao']:
+        for laughter in ['lol', 'rofl', 'haha', 'hehe', 'hoho', 'lmao',
+                         'rotfl', 'roflmao']:
             if laughter in msg_without_nick.lower():
                human = random.uniform(0, time_to_think)
                time.sleep(human)
-               respond = ['LOL', 'ROLF', 'haha', 'LMAO', 'hehe', ':-D', 'hoho']
+               respond = ['LOL', 'ROLF', 'haha', 'LMAO', 'hehe', ':-D',
+                          'hoho', 'lulz', 'ROTFL', 'lolz', 'lqtm']
                bot.say(random.choice(respond))
                return
 
-        for greeting in ['hello', 'welcome', 'greetings', 'hi', 'yo', 'hey', 'morning', 'afternoon', 'evening']:
+        for greeting in ['hello', 'welcome', 'greetings', 'hi', 'yo',
+                         'hey', 'morning', 'afternoon', 'evening']:
             if msg_without_nick.lower().startswith(greeting):
                human = random.uniform(0, time_to_think)
                time.sleep(human)
-               respond = ['Yo', 'Hey', 'Greetings', 'Hi', 'Hello', 'Welcome', 'How do you do', 'Time appropriate greetings']
+               respond = ['Yo', 'Hey', 'Greetings', 'Hi', 'Hello',
+                          'Welcome', 'How do you do', 'Nice to meet you',
+                          'Time appropriate greetings', 'Good day']
                bot.say(random.choice(respond))
                return
 
@@ -97,15 +102,18 @@ def chatter(bot, trigger):
             if msg_without_nick.lower().startswith(valediction) or msg_without_nick.lower().endswith(valediction):
                human = random.uniform(0, time_to_think)
                time.sleep(human)
-               respond = ['Bye', 'Bye bye', 'See you', 'Until next time', 'Good bye', 'Have a nice day', 'Come back soon', 'See ya', 'Later', 'Missing you already']
+               respond = ['Bye', 'Bye bye', 'See you', 'Until next time',
+                          'Good bye', 'Have a nice day', 'Come back soon',
+                          'See ya', 'Later', 'Missing you already']
                bot.say(random.choice(respond))
                return
 
-        for ponder in ['damn it', 'heh', 'huh', 'wtf', 'hmm']:
+        for ponder in ['damn it', 'heh', 'huh', 'wtf', 'hmm', 'grr']:
             if ponder in msg_without_nick.lower():
                human = random.uniform(0, time_to_think)
                time.sleep(human)
-               respond = ['Hmm', 'Tricky', 'Beats me', 'Google it', 'I feel your pain']
+               respond = ['Hmm', 'Tricky', 'Beats me', 'Google it?', 
+                          'I feel your pain', 'Grrr']
                bot.say(random.choice(respond))
                return
 
