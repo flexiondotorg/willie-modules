@@ -82,7 +82,7 @@ def chatter(bot, trigger):
             if laughter in msg_without_nick.lower():
                human = random.uniform(0, time_to_think)
                time.sleep(human)
-               respond = ['LOL', 'ROLF', 'haha', 'LMAO', 'hehe', ':-D',
+               respond = ['LOL', 'ROFL', 'haha', 'LMAO', 'hehe', ':-D',
                           'hoho', 'lulz', 'ROTFL', 'lolz', 'lqtm']
                bot.say(random.choice(respond))
                return
