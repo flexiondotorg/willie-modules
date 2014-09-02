@@ -20,7 +20,8 @@ RESP_NICK = (
 
 @module.commands('botsnack')
 def botsnack(bot, trigger):
-    if trigger.group(2):
+    group = trigger.group(2).strip() if trigger.group(2) else ''
+    if group and not group.lower() == bot.nick:
         receiver = trigger.group(2).strip()
         sender = trigger.nick
         nicks = {'sender': sender, 'receiver': receiver}
