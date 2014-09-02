@@ -13,14 +13,14 @@ from random import choice
      
 RESP = ('ta :)', '=D', 'schweet!', 'thanks :)', 'cheers!', 'Yum!')
 RESP_NICK = (
-    '%(receiver)s, here is a snacks from your friendly neighbourhood bot. Enjoy the bits!',
+    '%(receiver)s, here is a snack from your friendly neighbourhood bot. Enjoy the bits!',
     '%(sender)s, why are you giving away my snacks? %(receiver)s enjoy!',
     '%(sender)s, get your own snacks!',
     '%(receiver)s, %(sender)s is giving you one of my snacks, enjoy. But I\'m not liking it.')
 
 @module.commands('botsnack')
 def botsnack(bot, trigger):
-    if trigger.group(2).strip():
+    if trigger.group(2):
         receiver = trigger.group(2).strip()
         sender = trigger.nick
         nicks = {'sender': sender, 'receiver': receiver}

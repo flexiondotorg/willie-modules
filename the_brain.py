@@ -87,15 +87,15 @@ def chatter(bot, trigger):
                bot.say(random.choice(respond))
                return
 
-        for greeting in ['hello', 'welcome', 'greetings', 'hi', 'yo',
-                         'hey', 'morning', 'afternoon', 'evening']:
+        for greeting in ['hello', 'welcome', 'greetings', 'hi', 'hey',
+                         'morning', 'afternoon', 'evening', 'hiya']:
             if msg_without_nick.lower().startswith(greeting):
                human = random.uniform(0, time_to_think)
                time.sleep(human)
                respond = ['Yo', 'Hey', 'Greetings', 'Hi', 'Hello',
                           'Welcome', 'How do you do', 'Nice to meet you',
                           'Time appropriate greetings', 'Good day']
-               bot.say(random.choice(respond))
+               bot.reply(random.choice(respond))
                return
 
         for valediction in ['bye', 'goodbye', 'ttfn', 'brb', 'goodnight']:
@@ -105,7 +105,7 @@ def chatter(bot, trigger):
                respond = ['Bye', 'Bye bye', 'See you', 'Until next time',
                           'Good bye', 'Have a nice day', 'Come back soon',
                           'See ya', 'Later', 'Missing you already']
-               bot.say(random.choice(respond))
+               bot.reply(random.choice(respond))
                return
 
         for ponder in ['damn it', 'heh', 'huh', 'wtf', 'hmm', 'grr']:
