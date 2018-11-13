@@ -1,6 +1,6 @@
 # Introduction
 
-This repository holds modules for [Willie](https://github.com/embolalia/willie)
+This repository holds modules for [Willie](https://github.com/embolalia/willie), they are no longer being developed and archived here for reference.
 
 # Instructions
 
